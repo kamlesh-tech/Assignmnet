@@ -1,23 +1,40 @@
-package CoreJava1;
+package CoreJava2;
 import java.util.*;
 class Q7
 {
     public static void main(String args[])
     {
-        System.out.println("Enter Obtain mark out off 100.");
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enetr your obtain marks in Hindi = ");
-        float Hindi = sc.nextFloat();
-        System.out.print("Enetr your obtain marks in English = ");
-        float English = sc.nextFloat();
-        System.out.print("Enetr your obtain marks in Marathi = ");
-        float Marathi = sc.nextFloat();
-        System.out.print("Enetr your obtain marks in Science = ");
-        float Science = sc.nextFloat();
-        System.out.print("Enetr your obtain marks in SocailScience = ");
-        float SocailScience = sc.nextFloat();
-        float Total_marks=Hindi+English+Marathi+Science+SocailScience; 
-        float Percentage= (Total_marks/500)*100;
-        System.out.println("Percentage : "+Percentage);
+        System.out.println ("Enter size of array");
+        int size=sc.nextInt();
+      
+        int arr[]= new int [size];
+        System.out.println("Enter the value in array.");
+        for (int i=0;i<size;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Print array value");
+        for (int i=0;i<arr.length;i++)
+        {
+            System.out.println(arr[i]+" ");
+        }
+        System.out.println("Decending order.");
+        for (int i=0;i<arr.length;i++)
+        {
+            int temp = 0;
+            for (int j=i+1;j<arr.length;j++)
+            {
+                if (arr[i] < arr[j]) // Desinding mening largest to small
+                {
+                    temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+        for(int k=0;k<arr.length;k++)
+        System.out.println(arr[k]);
+        
     }
 }
